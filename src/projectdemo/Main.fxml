@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectdemo.MainController">
+   <children>
+      <VBox layoutX="203.0" layoutY="14.0" prefHeight="162.0" prefWidth="148.0" spacing="3.0">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Title">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Author">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Price">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Catagory">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Available">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="118.0" layoutY="257.0" prefHeight="209.0" prefWidth="484.0">
+         <children>
+            <TableView fx:id="tableViewBooks" onMouseClicked="#handleMouseAction" prefHeight="408.0" prefWidth="340.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="58.0" text="ID" />
+                <TableColumn fx:id="colTitle" prefWidth="71.0" text="Title" />
+                  <TableColumn fx:id="colAuthor" prefWidth="93.0" text="Author" />
+                  <TableColumn fx:id="colPrice" prefWidth="72.0" text="Price" />
+                  <TableColumn fx:id="colCatagory" prefWidth="92.0" text="Catagory" />
+                  <TableColumn fx:id="colAvailable" prefWidth="64.0" text="Available " />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox layoutX="362.0" layoutY="16.0" prefHeight="162.0" prefWidth="162.0" spacing="5.0">
+         <children>
+            <TextField fx:id="txtID" prefHeight="12.0" prefWidth="180.0" promptText="leave empty to auto generate">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTitle" prefHeight="12.0" prefWidth="180.0" promptText="title">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAuthor" prefHeight="12.0" prefWidth="180.0" promptText="author">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPrice" prefHeight="12.0" prefWidth="180.0" promptText="price">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCatagory" prefHeight="12.0" prefWidth="180.0" promptText="catagory">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAvailable" prefHeight="12.0" prefWidth="180.0" promptText="available">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <TextField fx:id="txtSearch" layoutX="446.0" layoutY="228.0" onKeyPressed="#handleKeyAction" prefHeight="25.0" prefWidth="156.0" />
+      <Button fx:id="editBtn" layoutX="361.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Edit book" />
+      <Button fx:id="deleteBtn" layoutX="438.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="83.0" text="Delete book" />
+      <HBox prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="goBackBtn" layoutX="48.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Go back" />
+      <Button fx:id="addBtn" layoutX="200.0" layoutY="192.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Add book" />
+      <Button fx:id="searchBtn" layoutX="386.0" layoutY="228.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Search" />
+      <Label fx:id="invalidLabel" layoutX="203.0" layoutY="232.0" />
+   </children>
+</AnchorPane>
